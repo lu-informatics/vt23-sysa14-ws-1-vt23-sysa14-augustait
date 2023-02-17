@@ -12,10 +12,11 @@ namespace WebSeriveAssignment3.DataAccessLayer
     {
         public static SqlConnection GetSqlServerConnection()
         {
-    string connectionString = ConfigurationManager.ConnectionStrings["FacultyDBConnectionString"].ConnectionString; var builder = new SqlConnectionStringBuilder(connectionString);
+    string connectionString = ConfigurationManager.ConnectionStrings["ICAStoreDBConnectionString"].ConnectionString; var builder = new SqlConnectionStringBuilder(connectionString);
     var connection = new SqlConnection(builder.ConnectionString);
 return connection;
     }
     }
 }
+
 
