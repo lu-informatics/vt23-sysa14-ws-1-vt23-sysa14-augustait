@@ -17,11 +17,12 @@ namespace WebSeriveAssignment3
     public class WebService1 : System.Web.Services.WebService
     {
 
-      //  [WebMethod]
-      //  public string HelloWorld()
-     //   {
-      //      return "Hello World";
+        [WebMethod(Description = "Returns a list of all Customers")]
+        public List<Customer> GetCustomers()
+        {
+            List<Customer> customers = DataAccessLayer.DAL.GetCustomers(); return customers;
 
         }
     }
 }
+
