@@ -7,38 +7,136 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Client1Reference
+namespace ServiceReferenceClient1
 {
+    using System.Runtime.Serialization;
     
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Customer", Namespace="http://ics.lu.se/")]
+    public partial class Customer : object
+    {
+        
+        private int IdField;
+        
+        private string NameField;
+        
+        private string UserNameField;
+        
+        private string AddressField;
+        
+        private int PhoneNumberField;
+        
+        private string EmailField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int Id
+        {
+            get
+            {
+                return this.IdField;
+            }
+            set
+            {
+                this.IdField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string Name
+        {
+            get
+            {
+                return this.NameField;
+            }
+            set
+            {
+                this.NameField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string UserName
+        {
+            get
+            {
+                return this.UserNameField;
+            }
+            set
+            {
+                this.UserNameField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+        public string Address
+        {
+            get
+            {
+                return this.AddressField;
+            }
+            set
+            {
+                this.AddressField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=4)]
+        public int PhoneNumber
+        {
+            get
+            {
+                return this.PhoneNumberField;
+            }
+            set
+            {
+                this.PhoneNumberField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
+        public string Email
+        {
+            get
+            {
+                return this.EmailField;
+            }
+            set
+            {
+                this.EmailField = value;
+            }
+        }
+    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://ics.lu.se/", ConfigurationName="Client1Reference.WebService1Soap")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://ics.lu.se/", ConfigurationName="ServiceReferenceClient1.WebService1Soap")]
     public interface WebService1Soap
     {
         
-        // CODEGEN: Generating message contract since element name HelloWorldResult from namespace http://ics.lu.se/ is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://ics.lu.se/HelloWorld", ReplyAction="*")]
-        Client1Reference.HelloWorldResponse HelloWorld(Client1Reference.HelloWorldRequest request);
+        // CODEGEN: Generating message contract since element name GetCustomersResult from namespace http://ics.lu.se/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://ics.lu.se/GetCustomers", ReplyAction="*")]
+        ServiceReferenceClient1.GetCustomersResponse GetCustomers(ServiceReferenceClient1.GetCustomersRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ics.lu.se/HelloWorld", ReplyAction="*")]
-        System.Threading.Tasks.Task<Client1Reference.HelloWorldResponse> HelloWorldAsync(Client1Reference.HelloWorldRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ics.lu.se/GetCustomers", ReplyAction="*")]
+        System.Threading.Tasks.Task<ServiceReferenceClient1.GetCustomersResponse> GetCustomersAsync(ServiceReferenceClient1.GetCustomersRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class HelloWorldRequest
+    public partial class GetCustomersRequest
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="HelloWorld", Namespace="http://ics.lu.se/", Order=0)]
-        public Client1Reference.HelloWorldRequestBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetCustomers", Namespace="http://ics.lu.se/", Order=0)]
+        public ServiceReferenceClient1.GetCustomersRequestBody Body;
         
-        public HelloWorldRequest()
+        public GetCustomersRequest()
         {
         }
         
-        public HelloWorldRequest(Client1Reference.HelloWorldRequestBody Body)
+        public GetCustomersRequest(ServiceReferenceClient1.GetCustomersRequestBody Body)
         {
             this.Body = Body;
         }
@@ -48,10 +146,10 @@ namespace Client1Reference
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute()]
-    public partial class HelloWorldRequestBody
+    public partial class GetCustomersRequestBody
     {
         
-        public HelloWorldRequestBody()
+        public GetCustomersRequestBody()
         {
         }
     }
@@ -60,18 +158,17 @@ namespace Client1Reference
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-   
-    public partial class HelloWorldResponse
+    public partial class GetCustomersResponse
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="HelloWorldResponse", Namespace="http://ics.lu.se/", Order=0)]
-        public Client1Reference.HelloWorldResponseBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetCustomersResponse", Namespace="http://ics.lu.se/", Order=0)]
+        public ServiceReferenceClient1.GetCustomersResponseBody Body;
         
-        public HelloWorldResponse()
+        public GetCustomersResponse()
         {
         }
         
-        public HelloWorldResponse(Client1Reference.HelloWorldResponseBody Body)
+        public GetCustomersResponse(ServiceReferenceClient1.GetCustomersResponseBody Body)
         {
             this.Body = Body;
         }
@@ -81,30 +178,30 @@ namespace Client1Reference
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute(Namespace="http://ics.lu.se/")]
-    public partial class HelloWorldResponseBody
+    public partial class GetCustomersResponseBody
     {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string HelloWorldResult;
+        public System.Collections.Generic.List<ServiceReferenceClient1.Customer> GetCustomersResult;
         
-        public HelloWorldResponseBody()
+        public GetCustomersResponseBody()
         {
         }
         
-        public HelloWorldResponseBody(string HelloWorldResult)
+        public GetCustomersResponseBody(System.Collections.Generic.List<ServiceReferenceClient1.Customer> GetCustomersResult)
         {
-            this.HelloWorldResult = HelloWorldResult;
+            this.GetCustomersResult = GetCustomersResult;
         }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    public interface WebService1SoapChannel : Client1Reference.WebService1Soap, System.ServiceModel.IClientChannel
+    public interface WebService1SoapChannel : ServiceReferenceClient1.WebService1Soap, System.ServiceModel.IClientChannel
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    public partial class WebService1SoapClient : System.ServiceModel.ClientBase<Client1Reference.WebService1Soap>, Client1Reference.WebService1Soap
+    public partial class WebService1SoapClient : System.ServiceModel.ClientBase<ServiceReferenceClient1.WebService1Soap>, ServiceReferenceClient1.WebService1Soap
     {
         
         /// <summary>
@@ -141,30 +238,30 @@ namespace Client1Reference
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Client1Reference.HelloWorldResponse Client1Reference.WebService1Soap.HelloWorld(Client1Reference.HelloWorldRequest request)
+        ServiceReferenceClient1.GetCustomersResponse ServiceReferenceClient1.WebService1Soap.GetCustomers(ServiceReferenceClient1.GetCustomersRequest request)
         {
-            return base.Channel.HelloWorld(request);
+            return base.Channel.GetCustomers(request);
         }
         
-        public string HelloWorld()
+        public System.Collections.Generic.List<ServiceReferenceClient1.Customer> GetCustomers()
         {
-            Client1Reference.HelloWorldRequest inValue = new Client1Reference.HelloWorldRequest();
-            inValue.Body = new Client1Reference.HelloWorldRequestBody();
-            Client1Reference.HelloWorldResponse retVal = ((Client1Reference.WebService1Soap)(this)).HelloWorld(inValue);
-            return retVal.Body.HelloWorldResult;
+            ServiceReferenceClient1.GetCustomersRequest inValue = new ServiceReferenceClient1.GetCustomersRequest();
+            inValue.Body = new ServiceReferenceClient1.GetCustomersRequestBody();
+            ServiceReferenceClient1.GetCustomersResponse retVal = ((ServiceReferenceClient1.WebService1Soap)(this)).GetCustomers(inValue);
+            return retVal.Body.GetCustomersResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Client1Reference.HelloWorldResponse> Client1Reference.WebService1Soap.HelloWorldAsync(Client1Reference.HelloWorldRequest request)
+        System.Threading.Tasks.Task<ServiceReferenceClient1.GetCustomersResponse> ServiceReferenceClient1.WebService1Soap.GetCustomersAsync(ServiceReferenceClient1.GetCustomersRequest request)
         {
-            return base.Channel.HelloWorldAsync(request);
+            return base.Channel.GetCustomersAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Client1Reference.HelloWorldResponse> HelloWorldAsync()
+        public System.Threading.Tasks.Task<ServiceReferenceClient1.GetCustomersResponse> GetCustomersAsync()
         {
-            Client1Reference.HelloWorldRequest inValue = new Client1Reference.HelloWorldRequest();
-            inValue.Body = new Client1Reference.HelloWorldRequestBody();
-            return ((Client1Reference.WebService1Soap)(this)).HelloWorldAsync(inValue);
+            ServiceReferenceClient1.GetCustomersRequest inValue = new ServiceReferenceClient1.GetCustomersRequest();
+            inValue.Body = new ServiceReferenceClient1.GetCustomersRequestBody();
+            return ((ServiceReferenceClient1.WebService1Soap)(this)).GetCustomersAsync(inValue);
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync()
@@ -203,11 +300,11 @@ namespace Client1Reference
         {
             if ((endpointConfiguration == EndpointConfiguration.WebService1Soap))
             {
-                return new System.ServiceModel.EndpointAddress("http://localhost/WebSeriveAssignment3/WebService1.asmx");
+                return new System.ServiceModel.EndpointAddress("http://localhost/WebServiceClient1/WebService1.asmx");
             }
             if ((endpointConfiguration == EndpointConfiguration.WebService1Soap12))
             {
-                return new System.ServiceModel.EndpointAddress("http://localhost/WebSeriveAssignment3/WebService1.asmx");
+                return new System.ServiceModel.EndpointAddress("http://localhost/WebServiceClient1/WebService1.asmx");
             }
             throw new System.InvalidOperationException(string.Format("Could not find endpoint with name \'{0}\'.", endpointConfiguration));
         }
