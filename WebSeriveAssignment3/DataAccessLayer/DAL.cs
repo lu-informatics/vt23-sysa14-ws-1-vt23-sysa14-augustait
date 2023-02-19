@@ -66,7 +66,7 @@ namespace WebSeriveAssignment3.DataAccessLayer
                     Product product = new Product();
 
                     product.ProductID = (int)reader["ProductID"];
-                    product.ProductName = reader["Name"] as string;
+                    product.ProductName = reader["ProductName"] as string;
                     product.Price = (decimal)reader["Price"];
                     product.CategoryID = (int)reader["CategoryID"];
                 
@@ -92,7 +92,7 @@ namespace WebSeriveAssignment3.DataAccessLayer
                 {
                     Store store = new Store();
 
-                    store.StoreID = (int)reader["StoreID"];
+                    store.SupermarketID = (int)reader["SupermarketID"];
                     store.RegionName = reader["RegionName"] as string;
                     store.StoreName = reader["StoreName"] as string;
                     store.City = reader["City"] as string;
@@ -121,7 +121,7 @@ namespace WebSeriveAssignment3.DataAccessLayer
                     ProductCategory category = new ProductCategory();
 
                     category.CategoryID = (int)reader["CategoryID"];
-                    category.CategoryName = reader["Name"] as string;
+                    category.CategoryName = reader["CategoryName"] as string;
                   
                     categories.Add(category);
                 }
@@ -137,7 +137,7 @@ namespace WebSeriveAssignment3.DataAccessLayer
             {
                 connection.Open();
 
-                string query = "SELECT * FROM Order";
+                string query = "SELECT * FROM Order_";
                 SqlCommand command = new SqlCommand(query, connection);
                 SqlDataReader reader = command.ExecuteReader();
 
