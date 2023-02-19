@@ -36,8 +36,8 @@ namespace WebSeriveAssignment3.DataAccessLayer
                 {
                     Customer customer = new Customer();
 
-                    customer.Id = (int)reader["CustomerID"];
                     customer.Name = reader["Name"] as string;
+                    customer.CustomerID = (int)reader["CustomerID"];                  
                     customer.UserName = reader["UserName"] as string;
                     customer.Address = reader["Address"] as string;
                     customer.PhoneNumber = (int)reader["PhoneNumber"];
@@ -193,7 +193,7 @@ namespace WebSeriveAssignment3.DataAccessLayer
                 if (reader.Read())
                 {
                     customer = new Customer();
-                    customer.Id = (int)reader["CustomerID"];
+                    customer.CustomerID = (int)reader["CustomerID"];
                     customer.Name = reader["Name"] as string;
                     customer.UserName = reader["UserName"] as string;
                     customer.Address = reader["Address"] as string;
