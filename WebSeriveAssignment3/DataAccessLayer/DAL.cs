@@ -35,7 +35,7 @@ namespace WebSeriveAssignment3.DataAccessLayer
                 {
                     Customer customer = new Customer();
 
-                    customer.Id = (int)reader["Id"];
+                    customer.Id = (int)reader["CustomerID"];
                     customer.Name = reader["Name"] as string;
                     customer.UserName = reader["UserName"] as string;
                     customer.Address = reader["Address"] as string;
