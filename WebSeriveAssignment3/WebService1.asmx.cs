@@ -60,6 +60,8 @@ namespace WebSeriveAssignment3
             return orders;
         }
 
+
+
       /*  [WebMethod(Description = "Returns all products from chosen category")]
         public static Product product(int CategoryID)
         {

@@ -18,9 +18,9 @@ namespace ServiceReferenceClient1
     public partial class Customer : object
     {
         
-        private int IdField;
-        
         private string NameField;
+        
+        private int CustomerIDField;
         
         private string UserNameField;
         
@@ -29,19 +29,6 @@ namespace ServiceReferenceClient1
         private int PhoneNumberField;
         
         private string EmailField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public int Id
-        {
-            get
-            {
-                return this.IdField;
-            }
-            set
-            {
-                this.IdField = value;
-            }
-        }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
         public string Name
@@ -56,7 +43,20 @@ namespace ServiceReferenceClient1
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=1)]
+        public int CustomerID
+        {
+            get
+            {
+                return this.CustomerIDField;
+            }
+            set
+            {
+                this.CustomerIDField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
         public string UserName
         {
             get
@@ -109,6 +109,274 @@ namespace ServiceReferenceClient1
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Product", Namespace="http://ics.lu.se/")]
+    public partial class Product : object
+    {
+        
+        private int ProductIDField;
+        
+        private string ProductNameField;
+        
+        private decimal PriceField;
+        
+        private int CategoryIDField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int ProductID
+        {
+            get
+            {
+                return this.ProductIDField;
+            }
+            set
+            {
+                this.ProductIDField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string ProductName
+        {
+            get
+            {
+                return this.ProductNameField;
+            }
+            set
+            {
+                this.ProductNameField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
+        public decimal Price
+        {
+            get
+            {
+                return this.PriceField;
+            }
+            set
+            {
+                this.PriceField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=3)]
+        public int CategoryID
+        {
+            get
+            {
+                return this.CategoryIDField;
+            }
+            set
+            {
+                this.CategoryIDField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Store", Namespace="http://ics.lu.se/")]
+    public partial class Store : object
+    {
+        
+        private int SupermarketIDField;
+        
+        private string RegionNameField;
+        
+        private string StoreNameField;
+        
+        private string CityField;
+        
+        private string StoreAddressField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int SupermarketID
+        {
+            get
+            {
+                return this.SupermarketIDField;
+            }
+            set
+            {
+                this.SupermarketIDField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string RegionName
+        {
+            get
+            {
+                return this.RegionNameField;
+            }
+            set
+            {
+                this.RegionNameField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        public string StoreName
+        {
+            get
+            {
+                return this.StoreNameField;
+            }
+            set
+            {
+                this.StoreNameField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+        public string City
+        {
+            get
+            {
+                return this.CityField;
+            }
+            set
+            {
+                this.CityField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
+        public string StoreAddress
+        {
+            get
+            {
+                return this.StoreAddressField;
+            }
+            set
+            {
+                this.StoreAddressField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ProductCategory", Namespace="http://ics.lu.se/")]
+    public partial class ProductCategory : object
+    {
+        
+        private int CategoryIDField;
+        
+        private string CategoryNameField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int CategoryID
+        {
+            get
+            {
+                return this.CategoryIDField;
+            }
+            set
+            {
+                this.CategoryIDField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string CategoryName
+        {
+            get
+            {
+                return this.CategoryNameField;
+            }
+            set
+            {
+                this.CategoryNameField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Order", Namespace="http://ics.lu.se/")]
+    public partial class Order : object
+    {
+        
+        private int OrderIDField;
+        
+        private string OrderDateField;
+        
+        private int SupermarketIDField;
+        
+        private int CustomerIDField;
+        
+        private string PaymentMethodField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int OrderID
+        {
+            get
+            {
+                return this.OrderIDField;
+            }
+            set
+            {
+                this.OrderIDField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string OrderDate
+        {
+            get
+            {
+                return this.OrderDateField;
+            }
+            set
+            {
+                this.OrderDateField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
+        public int SupermarketID
+        {
+            get
+            {
+                return this.SupermarketIDField;
+            }
+            set
+            {
+                this.SupermarketIDField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=3)]
+        public int CustomerID
+        {
+            get
+            {
+                return this.CustomerIDField;
+            }
+            set
+            {
+                this.CustomerIDField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
+        public string PaymentMethod
+        {
+            get
+            {
+                return this.PaymentMethodField;
+            }
+            set
+            {
+                this.PaymentMethodField = value;
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://ics.lu.se/", ConfigurationName="ServiceReferenceClient1.WebService1Soap")]
     public interface WebService1Soap
@@ -120,6 +388,34 @@ namespace ServiceReferenceClient1
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ics.lu.se/GetCustomers", ReplyAction="*")]
         System.Threading.Tasks.Task<ServiceReferenceClient1.GetCustomersResponse> GetCustomersAsync(ServiceReferenceClient1.GetCustomersRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetProductsResult from namespace http://ics.lu.se/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://ics.lu.se/GetProducts", ReplyAction="*")]
+        ServiceReferenceClient1.GetProductsResponse GetProducts(ServiceReferenceClient1.GetProductsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ics.lu.se/GetProducts", ReplyAction="*")]
+        System.Threading.Tasks.Task<ServiceReferenceClient1.GetProductsResponse> GetProductsAsync(ServiceReferenceClient1.GetProductsRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetStoresResult from namespace http://ics.lu.se/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://ics.lu.se/GetStores", ReplyAction="*")]
+        ServiceReferenceClient1.GetStoresResponse GetStores(ServiceReferenceClient1.GetStoresRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ics.lu.se/GetStores", ReplyAction="*")]
+        System.Threading.Tasks.Task<ServiceReferenceClient1.GetStoresResponse> GetStoresAsync(ServiceReferenceClient1.GetStoresRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetCategoriesResult from namespace http://ics.lu.se/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://ics.lu.se/GetCategories", ReplyAction="*")]
+        ServiceReferenceClient1.GetCategoriesResponse GetCategories(ServiceReferenceClient1.GetCategoriesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ics.lu.se/GetCategories", ReplyAction="*")]
+        System.Threading.Tasks.Task<ServiceReferenceClient1.GetCategoriesResponse> GetCategoriesAsync(ServiceReferenceClient1.GetCategoriesRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetOrdersResult from namespace http://ics.lu.se/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://ics.lu.se/GetOrders", ReplyAction="*")]
+        ServiceReferenceClient1.GetOrdersResponse GetOrders(ServiceReferenceClient1.GetOrdersRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ics.lu.se/GetOrders", ReplyAction="*")]
+        System.Threading.Tasks.Task<ServiceReferenceClient1.GetOrdersResponse> GetOrdersAsync(ServiceReferenceClient1.GetOrdersRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -194,6 +490,294 @@ namespace ServiceReferenceClient1
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetProductsRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetProducts", Namespace="http://ics.lu.se/", Order=0)]
+        public ServiceReferenceClient1.GetProductsRequestBody Body;
+        
+        public GetProductsRequest()
+        {
+        }
+        
+        public GetProductsRequest(ServiceReferenceClient1.GetProductsRequestBody Body)
+        {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetProductsRequestBody
+    {
+        
+        public GetProductsRequestBody()
+        {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetProductsResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetProductsResponse", Namespace="http://ics.lu.se/", Order=0)]
+        public ServiceReferenceClient1.GetProductsResponseBody Body;
+        
+        public GetProductsResponse()
+        {
+        }
+        
+        public GetProductsResponse(ServiceReferenceClient1.GetProductsResponseBody Body)
+        {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://ics.lu.se/")]
+    public partial class GetProductsResponseBody
+    {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public System.Collections.Generic.List<ServiceReferenceClient1.Product> GetProductsResult;
+        
+        public GetProductsResponseBody()
+        {
+        }
+        
+        public GetProductsResponseBody(System.Collections.Generic.List<ServiceReferenceClient1.Product> GetProductsResult)
+        {
+            this.GetProductsResult = GetProductsResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetStoresRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetStores", Namespace="http://ics.lu.se/", Order=0)]
+        public ServiceReferenceClient1.GetStoresRequestBody Body;
+        
+        public GetStoresRequest()
+        {
+        }
+        
+        public GetStoresRequest(ServiceReferenceClient1.GetStoresRequestBody Body)
+        {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetStoresRequestBody
+    {
+        
+        public GetStoresRequestBody()
+        {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetStoresResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetStoresResponse", Namespace="http://ics.lu.se/", Order=0)]
+        public ServiceReferenceClient1.GetStoresResponseBody Body;
+        
+        public GetStoresResponse()
+        {
+        }
+        
+        public GetStoresResponse(ServiceReferenceClient1.GetStoresResponseBody Body)
+        {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://ics.lu.se/")]
+    public partial class GetStoresResponseBody
+    {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public System.Collections.Generic.List<ServiceReferenceClient1.Store> GetStoresResult;
+        
+        public GetStoresResponseBody()
+        {
+        }
+        
+        public GetStoresResponseBody(System.Collections.Generic.List<ServiceReferenceClient1.Store> GetStoresResult)
+        {
+            this.GetStoresResult = GetStoresResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetCategoriesRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetCategories", Namespace="http://ics.lu.se/", Order=0)]
+        public ServiceReferenceClient1.GetCategoriesRequestBody Body;
+        
+        public GetCategoriesRequest()
+        {
+        }
+        
+        public GetCategoriesRequest(ServiceReferenceClient1.GetCategoriesRequestBody Body)
+        {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetCategoriesRequestBody
+    {
+        
+        public GetCategoriesRequestBody()
+        {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetCategoriesResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetCategoriesResponse", Namespace="http://ics.lu.se/", Order=0)]
+        public ServiceReferenceClient1.GetCategoriesResponseBody Body;
+        
+        public GetCategoriesResponse()
+        {
+        }
+        
+        public GetCategoriesResponse(ServiceReferenceClient1.GetCategoriesResponseBody Body)
+        {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://ics.lu.se/")]
+    public partial class GetCategoriesResponseBody
+    {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public System.Collections.Generic.List<ServiceReferenceClient1.ProductCategory> GetCategoriesResult;
+        
+        public GetCategoriesResponseBody()
+        {
+        }
+        
+        public GetCategoriesResponseBody(System.Collections.Generic.List<ServiceReferenceClient1.ProductCategory> GetCategoriesResult)
+        {
+            this.GetCategoriesResult = GetCategoriesResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetOrdersRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetOrders", Namespace="http://ics.lu.se/", Order=0)]
+        public ServiceReferenceClient1.GetOrdersRequestBody Body;
+        
+        public GetOrdersRequest()
+        {
+        }
+        
+        public GetOrdersRequest(ServiceReferenceClient1.GetOrdersRequestBody Body)
+        {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetOrdersRequestBody
+    {
+        
+        public GetOrdersRequestBody()
+        {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetOrdersResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetOrdersResponse", Namespace="http://ics.lu.se/", Order=0)]
+        public ServiceReferenceClient1.GetOrdersResponseBody Body;
+        
+        public GetOrdersResponse()
+        {
+        }
+        
+        public GetOrdersResponse(ServiceReferenceClient1.GetOrdersResponseBody Body)
+        {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://ics.lu.se/")]
+    public partial class GetOrdersResponseBody
+    {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public System.Collections.Generic.List<ServiceReferenceClient1.Order> GetOrdersResult;
+        
+        public GetOrdersResponseBody()
+        {
+        }
+        
+        public GetOrdersResponseBody(System.Collections.Generic.List<ServiceReferenceClient1.Order> GetOrdersResult)
+        {
+            this.GetOrdersResult = GetOrdersResult;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     public interface WebService1SoapChannel : ServiceReferenceClient1.WebService1Soap, System.ServiceModel.IClientChannel
     {
@@ -262,6 +846,114 @@ namespace ServiceReferenceClient1
             ServiceReferenceClient1.GetCustomersRequest inValue = new ServiceReferenceClient1.GetCustomersRequest();
             inValue.Body = new ServiceReferenceClient1.GetCustomersRequestBody();
             return ((ServiceReferenceClient1.WebService1Soap)(this)).GetCustomersAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ServiceReferenceClient1.GetProductsResponse ServiceReferenceClient1.WebService1Soap.GetProducts(ServiceReferenceClient1.GetProductsRequest request)
+        {
+            return base.Channel.GetProducts(request);
+        }
+        
+        public System.Collections.Generic.List<ServiceReferenceClient1.Product> GetProducts()
+        {
+            ServiceReferenceClient1.GetProductsRequest inValue = new ServiceReferenceClient1.GetProductsRequest();
+            inValue.Body = new ServiceReferenceClient1.GetProductsRequestBody();
+            ServiceReferenceClient1.GetProductsResponse retVal = ((ServiceReferenceClient1.WebService1Soap)(this)).GetProducts(inValue);
+            return retVal.Body.GetProductsResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ServiceReferenceClient1.GetProductsResponse> ServiceReferenceClient1.WebService1Soap.GetProductsAsync(ServiceReferenceClient1.GetProductsRequest request)
+        {
+            return base.Channel.GetProductsAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReferenceClient1.GetProductsResponse> GetProductsAsync()
+        {
+            ServiceReferenceClient1.GetProductsRequest inValue = new ServiceReferenceClient1.GetProductsRequest();
+            inValue.Body = new ServiceReferenceClient1.GetProductsRequestBody();
+            return ((ServiceReferenceClient1.WebService1Soap)(this)).GetProductsAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ServiceReferenceClient1.GetStoresResponse ServiceReferenceClient1.WebService1Soap.GetStores(ServiceReferenceClient1.GetStoresRequest request)
+        {
+            return base.Channel.GetStores(request);
+        }
+        
+        public System.Collections.Generic.List<ServiceReferenceClient1.Store> GetStores()
+        {
+            ServiceReferenceClient1.GetStoresRequest inValue = new ServiceReferenceClient1.GetStoresRequest();
+            inValue.Body = new ServiceReferenceClient1.GetStoresRequestBody();
+            ServiceReferenceClient1.GetStoresResponse retVal = ((ServiceReferenceClient1.WebService1Soap)(this)).GetStores(inValue);
+            return retVal.Body.GetStoresResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ServiceReferenceClient1.GetStoresResponse> ServiceReferenceClient1.WebService1Soap.GetStoresAsync(ServiceReferenceClient1.GetStoresRequest request)
+        {
+            return base.Channel.GetStoresAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReferenceClient1.GetStoresResponse> GetStoresAsync()
+        {
+            ServiceReferenceClient1.GetStoresRequest inValue = new ServiceReferenceClient1.GetStoresRequest();
+            inValue.Body = new ServiceReferenceClient1.GetStoresRequestBody();
+            return ((ServiceReferenceClient1.WebService1Soap)(this)).GetStoresAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ServiceReferenceClient1.GetCategoriesResponse ServiceReferenceClient1.WebService1Soap.GetCategories(ServiceReferenceClient1.GetCategoriesRequest request)
+        {
+            return base.Channel.GetCategories(request);
+        }
+        
+        public System.Collections.Generic.List<ServiceReferenceClient1.ProductCategory> GetCategories()
+        {
+            ServiceReferenceClient1.GetCategoriesRequest inValue = new ServiceReferenceClient1.GetCategoriesRequest();
+            inValue.Body = new ServiceReferenceClient1.GetCategoriesRequestBody();
+            ServiceReferenceClient1.GetCategoriesResponse retVal = ((ServiceReferenceClient1.WebService1Soap)(this)).GetCategories(inValue);
+            return retVal.Body.GetCategoriesResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ServiceReferenceClient1.GetCategoriesResponse> ServiceReferenceClient1.WebService1Soap.GetCategoriesAsync(ServiceReferenceClient1.GetCategoriesRequest request)
+        {
+            return base.Channel.GetCategoriesAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReferenceClient1.GetCategoriesResponse> GetCategoriesAsync()
+        {
+            ServiceReferenceClient1.GetCategoriesRequest inValue = new ServiceReferenceClient1.GetCategoriesRequest();
+            inValue.Body = new ServiceReferenceClient1.GetCategoriesRequestBody();
+            return ((ServiceReferenceClient1.WebService1Soap)(this)).GetCategoriesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ServiceReferenceClient1.GetOrdersResponse ServiceReferenceClient1.WebService1Soap.GetOrders(ServiceReferenceClient1.GetOrdersRequest request)
+        {
+            return base.Channel.GetOrders(request);
+        }
+        
+        public System.Collections.Generic.List<ServiceReferenceClient1.Order> GetOrders()
+        {
+            ServiceReferenceClient1.GetOrdersRequest inValue = new ServiceReferenceClient1.GetOrdersRequest();
+            inValue.Body = new ServiceReferenceClient1.GetOrdersRequestBody();
+            ServiceReferenceClient1.GetOrdersResponse retVal = ((ServiceReferenceClient1.WebService1Soap)(this)).GetOrders(inValue);
+            return retVal.Body.GetOrdersResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ServiceReferenceClient1.GetOrdersResponse> ServiceReferenceClient1.WebService1Soap.GetOrdersAsync(ServiceReferenceClient1.GetOrdersRequest request)
+        {
+            return base.Channel.GetOrdersAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReferenceClient1.GetOrdersResponse> GetOrdersAsync()
+        {
+            ServiceReferenceClient1.GetOrdersRequest inValue = new ServiceReferenceClient1.GetOrdersRequest();
+            inValue.Body = new ServiceReferenceClient1.GetOrdersRequestBody();
+            return ((ServiceReferenceClient1.WebService1Soap)(this)).GetOrdersAsync(inValue);
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync()
