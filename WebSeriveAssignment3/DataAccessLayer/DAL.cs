@@ -224,9 +224,36 @@ namespace WebSeriveAssignment3.DataAccessLayer
             }
             return product;
         }
+
     }
+        public static Order GetOrderFromCustomer(int CustomerID)
+        {
+            Order order = null;
+            using (SqlConnection connection = ConnectionHandler.GetSqlServerConnection())
+            {
+                connection.Open();
+
+                string query = "SELECT * FROM Order_ " +
+                        "WHERE CustomerID = @CustomerID";
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    order = new Order();
+                    order.OrderID = (int)reader["OrderID"];
+                    order.OrderDate = reader["OrderDate"] as string;
+                    order.SupermarketID = (int)reader["SupermarketID"];
+                    order.CustomerID = (int)reader["CustomerID"]; ;
+                    order.PaymentMethod = reader["PaymentMethod"] as string;
+                }
+                return order;
+            }
+        }
     }
 }
-    
+
+
+
 
 
