@@ -19,8 +19,7 @@ namespace WebSeriveAssignment3
    
     public class WebService1 : System.Web.Services.WebService
     {
-     
-
+    
 
         [WebMethod(Description = "Returns a list of all Customers")]
         public List<Customer> GetCustomers()
