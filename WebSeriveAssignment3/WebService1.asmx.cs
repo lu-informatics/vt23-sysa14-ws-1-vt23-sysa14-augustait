@@ -57,15 +57,33 @@ namespace WebSeriveAssignment3
             return orders;
         }
 
-
-
-      /*  [WebMethod(Description = "Returns all products from chosen category")]
-        public static Product product(int CategoryID)
+      [WebMethod(Description = "Returns all products from chosen category")]
+        public List<Product> GetProductsFromCategory(int categoryID)
         {
-            DAL dataAccess = new DAL();
-            Product product = dataAccess.GetProductsFromCatgeory(CategoryID);
+           List <Product> products = DAL.GetProductsFromCatgeory(categoryID);
+            return products;
+        }
+
+        [WebMethod(Description = "Returns a customer by ID")]
+        public Customer GetCustomerByID(int customerID)
+        {
+            Customer customer = DAL.GetCustomerByID(customerID);
+            return customer;
+        }
+
+        [WebMethod(Description = "Returns the product with the highest price")]
+        public Product GetProductPriceHighest(int price)
+        {
+            Product product = DAL.GetProductPriceHighest(price);
             return product;
-        } */
+        }
+
+        [WebMethod(Description = "Returns all orders from a customer")]
+        public List<Order> GetOrdersFromCustomer(int customerID)
+        {
+           List <Order> orders = DAL.GetOrdersFromCustomer(customerID);
+            return orders;
+        }
     }
 }
 

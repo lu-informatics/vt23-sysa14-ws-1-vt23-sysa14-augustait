@@ -149,27 +149,32 @@ namespace WebSeriveAssignment3.DataAccessLayer
     }
             return orders;
         }
-        public static Product GetProductsFromCatgeory(int CategoryID)
+        public static List<Product> GetProductsFromCatgeory(int CategoryID)
         {
-            Product product = null;
+            List<Product> products = new List<Product>();
+
             using (SqlConnection connection = ConnectionHandler.GetSqlServerConnection())
             {
                 connection.Open();
 
-                string query = "SELECT ProductName, CategoryID FROM Product" +
-                "WHERE CategoryID = @CategoryID";
+                string query = "SELECT ProductName, CategoryID FROM Product WHERE CategoryID = @CategoryID";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@CategoryID", CategoryID);
 
-                 SqlCommand command = new SqlCommand(query, connection);
-                 SqlDataReader reader = command.ExecuteReader();
-                if (reader.Read())
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
                 {
-                    product = new Product();
+                    Product product = new Product();
                     product.CategoryID = (int)reader["CategoryID"];
                     product.ProductName = reader["ProductName"] as string;
 
+                    products.Add(product);
                 }
-              return product;
-}
+            }
+
+            return products;
+    
         }
         public static Customer GetCustomerByID(int CustomerID)
         {
@@ -218,32 +223,34 @@ namespace WebSeriveAssignment3.DataAccessLayer
         }
 
     }
-        public static Order GetOrderFromCustomer(int CustomerID)
+        public static List<Order> GetOrdersFromCustomer(int customerID)
         {
-            Order order = null;
+            List<Order> orders = new List<Order>();
             using (SqlConnection connection = ConnectionHandler.GetSqlServerConnection())
             {
                 connection.Open();
 
-                string query = "SELECT * FROM Order_ " +
-                        "WHERE CustomerID = @CustomerID";
+                string query = "SELECT * FROM Order_ WHERE CustomerID = @CustomerID";
                 SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@CustomerID", customerID);
                 SqlDataReader reader = command.ExecuteReader();
 
-                if (reader.Read())
+                while (reader.Read())
                 {
-                    order = new Order();
+                    Order order = new Order();
                     order.OrderID = (int)reader["OrderID"];
                     order.OrderDate = reader["OrderDate"] as string;
                     order.SupermarketID = (int)reader["SupermarketID"];
-                    order.CustomerID = (int)reader["CustomerID"]; ;
+                    order.CustomerID = (int)reader["CustomerID"];
                     order.PaymentMethod = reader["PaymentMethod"] as string;
+                    orders.Add(order);
                 }
-                return order;
             }
+            return orders;
         }
     }
 }
+
 
 
 
