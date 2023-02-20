@@ -8,7 +8,7 @@ List<Customer> customers = service.GetCustomers();
 
 foreach(Customer c in customers)
 {
-    Console.WriteLine("Customer Names:");
+    Console.WriteLine("Customer:");
     Console.WriteLine(c.Name);
     Console.WriteLine("-------------");
 

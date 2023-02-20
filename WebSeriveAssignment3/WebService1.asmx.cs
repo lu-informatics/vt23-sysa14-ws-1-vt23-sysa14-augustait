@@ -19,11 +19,12 @@ namespace WebSeriveAssignment3
    
     public class WebService1 : System.Web.Services.WebService
     {
+        DAL dataAccess = new DAL();
+
 
         [WebMethod(Description = "Returns a list of all Customers")]
         public List<Customer> GetCustomers()
         {
-            DAL dataAccess = new DAL();
             List<Customer> customers = dataAccess.GetAllCustomers();
             return customers;
         }
@@ -31,7 +32,6 @@ namespace WebSeriveAssignment3
         [WebMethod(Description = "Returns a list of all Products")]
         public List<Product> GetProducts()
         {
-            DAL dataAccess = new DAL();
             List<Product> products = dataAccess.GetAllProducts();
             return products;
         }
@@ -39,7 +39,6 @@ namespace WebSeriveAssignment3
         [WebMethod(Description = "Returns a list of all stores")]
         public List<Store> GetStores()
         {
-            DAL dataAccess = new DAL();
             List<Store> stores = dataAccess.GetAllStores();
             return stores;
         }
@@ -47,7 +46,6 @@ namespace WebSeriveAssignment3
         [WebMethod(Description = "Returns a list of all Product Categories")]
         public List<ProductCategory> GetCategories()
         {
-            DAL dataAccess = new DAL();
             List<ProductCategory> categories = dataAccess.GetAllProductCategories();
             return categories;
         }
@@ -55,7 +53,6 @@ namespace WebSeriveAssignment3
         [WebMethod(Description = "Returns a list of all orders")]
         public List<Order> GetOrders()
         {
-            DAL dataAccess = new DAL();
             List<Order> orders = dataAccess.GetAllOrders();
             return orders;
         }
