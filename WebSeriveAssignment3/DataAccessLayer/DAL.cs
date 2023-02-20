@@ -12,19 +12,11 @@ namespace WebSeriveAssignment3.DataAccessLayer
     public class DAL
     {
 
-        private readonly string connectionString;
-
-        public DAL()
-        {
-            connectionString = ConfigurationManager.ConnectionStrings["ICAStoreDBConnectionString"].ConnectionString;
-        }
-
-
-        public List<Customer> GetAllCustomers()
+        public static List<Customer> GetAllCustomers()
         {
             List<Customer> customers = new List<Customer>();
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = ConnectionHandler.GetSqlServerConnection())
             {
                 connection.Open();
 
@@ -49,11 +41,11 @@ namespace WebSeriveAssignment3.DataAccessLayer
             }
             return customers;
         }
-        public List<Product> GetAllProducts()
+        public static List<Product> GetAllProducts()
         {
             List<Product> products = new List<Product>();
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = ConnectionHandler.GetSqlServerConnection())
             {
                 connection.Open();
 
@@ -76,11 +68,11 @@ namespace WebSeriveAssignment3.DataAccessLayer
             }
             return products;
         }
-        public List<Store> GetAllStores()
+        public static List<Store> GetAllStores()
         {
             List<Store> stores = new List<Store>();
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = ConnectionHandler.GetSqlServerConnection())
             {
                 connection.Open();
 
@@ -104,11 +96,11 @@ namespace WebSeriveAssignment3.DataAccessLayer
             }
             return stores;
         }
-        public List<ProductCategory> GetAllProductCategories()
+        public static List<ProductCategory> GetAllProductCategories()
         {
             List<ProductCategory> categories = new List<ProductCategory>(); 
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = ConnectionHandler.GetSqlServerConnection())
             {
                 connection.Open();
 
@@ -129,11 +121,11 @@ namespace WebSeriveAssignment3.DataAccessLayer
             }
             return categories;
         }
-        public List<Order> GetAllOrders()
+        public static List<Order> GetAllOrders()
         {
             List<Order> orders = new List<Order>();
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = ConnectionHandler.GetSqlServerConnection())
             {
                 connection.Open();
 
