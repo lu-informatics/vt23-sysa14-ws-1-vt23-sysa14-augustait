@@ -19,41 +19,41 @@ namespace WebSeriveAssignment3
    
     public class WebService1 : System.Web.Services.WebService
     {
-        DAL dataAccess = new DAL();
+     
 
 
         [WebMethod(Description = "Returns a list of all Customers")]
         public List<Customer> GetCustomers()
         {
-            List<Customer> customers = dataAccess.GetAllCustomers();
+            List<Customer> customers = DataAccessLayer.DAL.GetAllCustomers();
             return customers;
         }
 
         [WebMethod(Description = "Returns a list of all Products")]
         public List<Product> GetProducts()
         {
-            List<Product> products = dataAccess.GetAllProducts();
+            List<Product> products = DataAccessLayer.DAL.GetAllProducts();
             return products;
         }
 
         [WebMethod(Description = "Returns a list of all stores")]
         public List<Store> GetStores()
         {
-            List<Store> stores = dataAccess.GetAllStores();
+            List<Store> stores = DataAccessLayer.DAL.GetAllStores();
             return stores;
         }
 
         [WebMethod(Description = "Returns a list of all Product Categories")]
         public List<ProductCategory> GetCategories()
         {
-            List<ProductCategory> categories = dataAccess.GetAllProductCategories();
+            List<ProductCategory> categories = DataAccessLayer.DAL.GetAllProductCategories();
             return categories;
         }
 
         [WebMethod(Description = "Returns a list of all orders")]
         public List<Order> GetOrders()
         {
-            List<Order> orders = dataAccess.GetAllOrders();
+            List<Order> orders = DataAccessLayer.DAL.GetAllOrders();
             return orders;
         }
 
