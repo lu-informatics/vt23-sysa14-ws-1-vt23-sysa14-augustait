@@ -202,7 +202,7 @@ namespace WebSeriveAssignment3.DataAccessLayer
     }
         }
 
-        public static Product GetProductPriceHighest(int Price)
+        public static Product GetProductPriceHighest()
     {
         Product product = null;
         using (SqlConnection connection = ConnectionHandler.GetSqlServerConnection())
@@ -216,7 +216,7 @@ namespace WebSeriveAssignment3.DataAccessLayer
 
             if (reader.Read()) {     
                 product = new Product();
-                product.Price = (int)reader["Price"];
+                product.Price = (decimal)reader["Price"];
                 product.ProductName = reader["ProductName"] as string;
             }
             return product;
@@ -248,7 +248,36 @@ namespace WebSeriveAssignment3.DataAccessLayer
             }
             return orders;
         }
+   
+    public static List<Orderline> GetOrderLinesFromOrder(int OrderID)
+    {
+        List<Orderline> orderlines = new List<Orderline>();
+
+        using (SqlConnection connection = ConnectionHandler.GetSqlServerConnection())
+        {
+            connection.Open();
+
+            string query = "SELECT * FROM Orderline WHERE OrderID = @OrderID";
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@OrderID", OrderID);
+
+            SqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                Orderline orderline = new Orderline();
+                orderline.OrderID = (int)reader["OrderID"];
+                orderline.ProductID = (int)reader["ProductID"];
+                orderline.OrderlineNumber = (int)reader["OrderlineNumber"];
+                orderline.Quantity = (int)reader["Quantity"];
+
+
+                orderlines.Add(orderline);
+            }
+            return orderlines;
+        }
     }
+}
 }
 
 

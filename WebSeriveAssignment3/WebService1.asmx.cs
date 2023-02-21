@@ -71,9 +71,9 @@ namespace WebSeriveAssignment3
         }
 
         [WebMethod(Description = "Returns the product with the highest price")]
-        public Product GetProductPriceHighest(int price)
+        public Product GetProductPriceHighest()
         {
-            Product product = DAL.GetProductPriceHighest(price);
+            Product product = DAL.GetProductPriceHighest();
             return product;
         }
 
@@ -83,7 +83,14 @@ namespace WebSeriveAssignment3
            List <Order> orders = DAL.GetOrdersFromCustomer(customerID);
             return orders;
         }
+
+    [WebMethod(Description = "Returns all orderlines from a order")]
+    public List<Orderline> GetOrdersLinesFromOrder(int OrderID)
+    {
+        List<Orderline> orderlines = DAL.GetOrderLinesFromOrder(OrderID);
+        return orderlines;
     }
+}
 }
 
 
