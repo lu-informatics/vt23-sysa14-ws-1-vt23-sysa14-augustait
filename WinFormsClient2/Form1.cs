@@ -27,9 +27,14 @@ namespace WinFormsClient2
                 case "Product Category":
                     // Call the GetCustomers method and display the results in the RichTextBox
                     List<ProductCategory> categories = service.GetCategories();
+
+                    listBoxViewAllInformation.Items.Clear();
+
                     foreach (ProductCategory category in categories)
                     {
-                        richTextBoxViewAllInformation.AppendText($"{category.CategoryID}\n");
+                  
+                        listBoxViewAllInformation.Items.Add(category.CategoryID);
+
                     }
                     break;
 
@@ -38,9 +43,18 @@ namespace WinFormsClient2
                 case "Customers":
                     // Call the GetCustomers method and display the results in the RichTextBox
                     List<Customer> customers = service.GetCustomers();
+
+                    listBoxViewAllInformation.Items.Clear();
+                    
+                    listBoxViewAllInformation.Items.Add("CUSTOMER INFO:");
+
+
                     foreach (Customer customer in customers)
                     {
-                        richTextBoxViewAllInformation.AppendText($"{customer.Name}\n");
+                        string customerInfo = string.Format("Name: {0} - Customer ID: {1} - Phone Number: {2}", customer.Name, customer.CustomerID, customer.PhoneNumber);
+
+                        listBoxViewAllInformation.Items.Add(customerInfo);
+                       
                     }
                     break;
 
@@ -48,9 +62,12 @@ namespace WinFormsClient2
                 case "Orders":
                     // Call the GetOrders method and display the results in the RichTextBox
                     List<Order> orders = service.GetOrders();
+
+                    listBoxViewAllInformation.Items.Clear();
+
                     foreach (Order order in orders)
                     {
-                        richTextBoxViewAllInformation.AppendText($"{order.OrderID}\n");
+                        listBoxViewAllInformation.Items.Add(order.OrderID);
                     }
                     break;
 
@@ -58,25 +75,32 @@ namespace WinFormsClient2
                 case "Products":
                     // Call the GetOrders method and display the results in the RichTextBox
                     List<Product> products = service.GetProducts();
+
+                    listBoxViewAllInformation.Items.Clear();
+
                     foreach (Product product in products)
                     {
-                        richTextBoxViewAllInformation.AppendText($"{product.ProductID}\n");
+                        listBoxViewAllInformation.Items.Add(product.ProductID);
+
                     }
                     break;
 
                 case "Stores":
                     // Call the GetOrders method and display the results in the RichTextBox
                     List<Store> stores = service.GetStores();
+
+                    listBoxViewAllInformation.Items.Clear();
+
                     foreach (Store store in stores)
                     {
-                        richTextBoxViewAllInformation.AppendText($"{store.SupermarketID}\n");
+                        listBoxViewAllInformation.Items.Add(store.SupermarketID);
+
                     }
                     break;
-
                
 
             }
 
-            }
+        }
     }
 }
