@@ -31,12 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.listBoxViewAllInformation = new System.Windows.Forms.ListBox();
+            this.buttonViewInformationSelect = new System.Windows.Forms.Button();
             this.comboBoxViewInformation = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBoxICA = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.buttonViewInformationSelect = new System.Windows.Forms.Button();
-            this.richTextBoxViewAllInformation = new System.Windows.Forms.RichTextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxICA)).BeginInit();
@@ -54,7 +54,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.richTextBoxViewAllInformation);
+            this.tabPage1.Controls.Add(this.listBoxViewAllInformation);
             this.tabPage1.Controls.Add(this.buttonViewInformationSelect);
             this.tabPage1.Controls.Add(this.comboBoxViewInformation);
             this.tabPage1.Controls.Add(this.textBox1);
@@ -67,6 +67,26 @@
             this.tabPage1.Text = "View Information";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // listBoxViewAllInformation
+            // 
+            this.listBoxViewAllInformation.FormattingEnabled = true;
+            this.listBoxViewAllInformation.ItemHeight = 15;
+            this.listBoxViewAllInformation.Location = new System.Drawing.Point(125, 104);
+            this.listBoxViewAllInformation.Name = "listBoxViewAllInformation";
+            this.listBoxViewAllInformation.Size = new System.Drawing.Size(492, 139);
+            this.listBoxViewAllInformation.TabIndex = 7;
+            // 
+            // buttonViewInformationSelect
+            // 
+            this.buttonViewInformationSelect.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonViewInformationSelect.Location = new System.Drawing.Point(222, 327);
+            this.buttonViewInformationSelect.Name = "buttonViewInformationSelect";
+            this.buttonViewInformationSelect.Size = new System.Drawing.Size(293, 47);
+            this.buttonViewInformationSelect.TabIndex = 5;
+            this.buttonViewInformationSelect.Text = "SELECT";
+            this.buttonViewInformationSelect.UseVisualStyleBackColor = true;
+            this.buttonViewInformationSelect.Click += new System.EventHandler(this.buttonViewInformationSelect_Click);
+            // 
             // comboBoxViewInformation
             // 
             this.comboBoxViewInformation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -77,16 +97,16 @@
             "Customers",
             "Stores",
             "Orders"});
-            this.comboBoxViewInformation.Location = new System.Drawing.Point(31, 184);
+            this.comboBoxViewInformation.Location = new System.Drawing.Point(125, 274);
             this.comboBoxViewInformation.Name = "comboBoxViewInformation";
-            this.comboBoxViewInformation.Size = new System.Drawing.Size(138, 23);
+            this.comboBoxViewInformation.Size = new System.Drawing.Size(492, 23);
             this.comboBoxViewInformation.TabIndex = 4;
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBox1.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.textBox1.Location = new System.Drawing.Point(175, 19);
+            this.textBox1.Location = new System.Drawing.Point(282, 26);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(459, 43);
             this.textBox1.TabIndex = 3;
@@ -95,7 +115,7 @@
             // pictureBoxICA
             // 
             this.pictureBoxICA.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxICA.Image")));
-            this.pictureBoxICA.Location = new System.Drawing.Point(6, 0);
+            this.pictureBoxICA.Location = new System.Drawing.Point(113, 3);
             this.pictureBoxICA.Name = "pictureBoxICA";
             this.pictureBoxICA.Size = new System.Drawing.Size(163, 81);
             this.pictureBoxICA.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -111,24 +131,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // buttonViewInformationSelect
-            // 
-            this.buttonViewInformationSelect.Location = new System.Drawing.Point(31, 338);
-            this.buttonViewInformationSelect.Name = "buttonViewInformationSelect";
-            this.buttonViewInformationSelect.Size = new System.Drawing.Size(75, 23);
-            this.buttonViewInformationSelect.TabIndex = 5;
-            this.buttonViewInformationSelect.Text = "SELECT";
-            this.buttonViewInformationSelect.UseVisualStyleBackColor = true;
-            this.buttonViewInformationSelect.Click += new System.EventHandler(this.buttonViewInformationSelect_Click);
-            // 
-            // richTextBoxViewAllInformation
-            // 
-            this.richTextBoxViewAllInformation.Location = new System.Drawing.Point(411, 111);
-            this.richTextBoxViewAllInformation.Name = "richTextBoxViewAllInformation";
-            this.richTextBoxViewAllInformation.Size = new System.Drawing.Size(344, 250);
-            this.richTextBoxViewAllInformation.TabIndex = 6;
-            this.richTextBoxViewAllInformation.Text = "";
             // 
             // Form1
             // 
@@ -154,7 +156,7 @@
         private TextBox textBox1;
         private PictureBox pictureBoxICA;
         private TabPage tabPage2;
-        private RichTextBox richTextBoxViewAllInformation;
         private Button buttonViewInformationSelect;
+        private ListBox listBoxViewAllInformation;
     }
 }
