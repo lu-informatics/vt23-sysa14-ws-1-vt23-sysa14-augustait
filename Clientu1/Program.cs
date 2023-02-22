@@ -13,3 +13,21 @@ foreach(Customer c in customers)
     Console.WriteLine("-------------");
 
 }
+
+List<Order> orders = service.GetOrdersFromCustomer(2);
+foreach (Order o in orders)
+{
+    Console.WriteLine("Order:");
+    Console.WriteLine(o.OrderID);
+    Console.WriteLine("-------------");
+
+}
+
+List<Orderline> or = service.GetOrdersLinesFromOrder(18732);
+foreach (Orderline o in or)
+{
+    Console.WriteLine("Quantity:");
+    Console.WriteLine(o.ProductID);
+    Console.WriteLine("-------------");
+
+}
