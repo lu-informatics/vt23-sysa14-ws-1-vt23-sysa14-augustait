@@ -157,7 +157,7 @@ namespace WebSeriveAssignment3.DataAccessLayer
             {
                 connection.Open();
 
-                string query = "SELECT ProductName, CategoryID FROM Product WHERE CategoryID = @CategoryID";
+                string query = "SELECT * FROM Product WHERE CategoryID = @CategoryID";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@CategoryID", CategoryID);
 
@@ -166,8 +166,11 @@ namespace WebSeriveAssignment3.DataAccessLayer
                 while (reader.Read())
                 {
                     Product product = new Product();
-                    product.CategoryID = (int)reader["CategoryID"];
+                    product.ProductID = (int)reader["ProductID"];
                     product.ProductName = reader["ProductName"] as string;
+                    product.Price = (decimal)reader["Price"];
+                    product.CategoryID = (int)reader["CategoryID"];
+
 
                     products.Add(product);
                 }
