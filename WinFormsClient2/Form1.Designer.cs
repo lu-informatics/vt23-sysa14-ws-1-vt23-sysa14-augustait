@@ -31,13 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.listBoxViewAllInformation = new System.Windows.Forms.ListBox();
             this.buttonViewInformationSelect = new System.Windows.Forms.Button();
             this.comboBoxViewInformation = new System.Windows.Forms.ComboBox();
             this.pictureBoxICA = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxICA)).BeginInit();
@@ -69,13 +69,34 @@
             this.tabPage1.Text = "View Information";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(276, 280);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(193, 21);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Select a web service to call";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label1.Location = new System.Drawing.Point(276, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(416, 32);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Supermarket Web Service Manager";
+            // 
             // listBoxViewAllInformation
             // 
             this.listBoxViewAllInformation.FormattingEnabled = true;
             this.listBoxViewAllInformation.ItemHeight = 15;
-            this.listBoxViewAllInformation.Location = new System.Drawing.Point(125, 104);
+            this.listBoxViewAllInformation.Location = new System.Drawing.Point(15, 104);
             this.listBoxViewAllInformation.Name = "listBoxViewAllInformation";
-            this.listBoxViewAllInformation.Size = new System.Drawing.Size(492, 139);
+            this.listBoxViewAllInformation.Size = new System.Drawing.Size(776, 139);
             this.listBoxViewAllInformation.TabIndex = 7;
             // 
             // buttonViewInformationSelect
@@ -123,27 +144,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label1.Location = new System.Drawing.Point(276, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(416, 32);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Supermarket Web Service Manager";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(276, 280);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(193, 21);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Select a web service to call";
             // 
             // Form1
             // 

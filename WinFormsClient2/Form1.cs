@@ -30,10 +30,14 @@ namespace WinFormsClient2
 
                     listBoxViewAllInformation.Items.Clear();
 
+                    listBoxViewAllInformation.Items.Add("CATEGORIES INFO:");
+
+
                     foreach (ProductCategory category in categories)
                     {
-                  
-                        listBoxViewAllInformation.Items.Add(category.CategoryID);
+
+                        string categoryInfo = string.Format("Category ID: {0} - Category Name: {1}", category.CategoryID, category.CategoryName);
+                        listBoxViewAllInformation.Items.Add(categoryInfo);
 
                     }
                     break;
@@ -46,7 +50,7 @@ namespace WinFormsClient2
 
                     listBoxViewAllInformation.Items.Clear();
                     
-                    listBoxViewAllInformation.Items.Add("CUSTOMER INFO:");
+                    listBoxViewAllInformation.Items.Add("CUSTOMERS INFO:");
 
 
                     foreach (Customer customer in customers)
@@ -66,9 +70,13 @@ namespace WinFormsClient2
 
                     listBoxViewAllInformation.Items.Clear();
 
+                    listBoxViewAllInformation.Items.Add("ORDERS INFO:");
+
+
                     foreach (Order order in orders)
                     {
-                        listBoxViewAllInformation.Items.Add(order.OrderID);
+                        string orderInfo = string.Format("Order ID: {0} - Date: {1} - Supermarket ID: {2} - Customer ID: {3} - Payment Method: {4}", order.OrderID, order.OrderDate, order.SupermarketID, order.CustomerID, order.PaymentMethod);
+                        listBoxViewAllInformation.Items.Add(orderInfo);
                     }
                     break;
 
@@ -79,9 +87,13 @@ namespace WinFormsClient2
 
                     listBoxViewAllInformation.Items.Clear();
 
+                    listBoxViewAllInformation.Items.Add("PRODUCTS INFO:");
+
+
                     foreach (Product product in products)
                     {
-                        listBoxViewAllInformation.Items.Add(product.ProductID);
+                        string productInfo = string.Format("Product ID: {0} - Name: {1} - Price: {2} - Category ID: {3}", product.ProductID, product.ProductName, product.Price, product.CategoryID);
+                        listBoxViewAllInformation.Items.Add(productInfo);
 
                     }
                     break;
@@ -92,9 +104,14 @@ namespace WinFormsClient2
 
                     listBoxViewAllInformation.Items.Clear();
 
+                    listBoxViewAllInformation.Items.Add("STORES INFO:");
+
+
                     foreach (Store store in stores)
                     {
-                        listBoxViewAllInformation.Items.Add(store.SupermarketID);
+                        string storeInfo = string.Format("Supermarket ID: {0} - Region: {1} - Store name: {2} - City: {3} - Address: {4}", store.SupermarketID, store.RegionName, store.StoreName, store.City, store.StoreAddress);
+
+                        listBoxViewAllInformation.Items.Add(storeInfo);
 
                     }
                     break;
