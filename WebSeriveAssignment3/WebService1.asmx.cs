@@ -84,12 +84,12 @@ namespace WebSeriveAssignment3
             return orders;
         }
 
-    [WebMethod(Description = "Returns all orderlines from a order")]
-    public List<Orderline> GetOrdersLinesFromOrder(int OrderID)
-    {
+         [WebMethod(Description = "Returns all orderlines from a order")]
+        public List<Orderline> GetOrdersLinesFromOrder(int OrderID)
+        {
         List<Orderline> orderlines = DAL.GetOrderLinesFromOrder(OrderID);
         return orderlines;
-    }
+        }
 }
 }
 

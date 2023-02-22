@@ -34,9 +34,10 @@
             this.listBoxViewAllInformation = new System.Windows.Forms.ListBox();
             this.buttonViewInformationSelect = new System.Windows.Forms.Button();
             this.comboBoxViewInformation = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBoxICA = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxICA)).BeginInit();
@@ -54,10 +55,11 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.listBoxViewAllInformation);
             this.tabPage1.Controls.Add(this.buttonViewInformationSelect);
             this.tabPage1.Controls.Add(this.comboBoxViewInformation);
-            this.tabPage1.Controls.Add(this.textBox1);
             this.tabPage1.Controls.Add(this.pictureBoxICA);
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
@@ -78,10 +80,10 @@
             // 
             // buttonViewInformationSelect
             // 
-            this.buttonViewInformationSelect.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonViewInformationSelect.Location = new System.Drawing.Point(222, 327);
+            this.buttonViewInformationSelect.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonViewInformationSelect.Location = new System.Drawing.Point(222, 345);
             this.buttonViewInformationSelect.Name = "buttonViewInformationSelect";
-            this.buttonViewInformationSelect.Size = new System.Drawing.Size(293, 47);
+            this.buttonViewInformationSelect.Size = new System.Drawing.Size(293, 29);
             this.buttonViewInformationSelect.TabIndex = 5;
             this.buttonViewInformationSelect.Text = "SELECT";
             this.buttonViewInformationSelect.UseVisualStyleBackColor = true;
@@ -97,20 +99,10 @@
             "Customers",
             "Stores",
             "Orders"});
-            this.comboBoxViewInformation.Location = new System.Drawing.Point(125, 274);
+            this.comboBoxViewInformation.Location = new System.Drawing.Point(125, 304);
             this.comboBoxViewInformation.Name = "comboBoxViewInformation";
             this.comboBoxViewInformation.Size = new System.Drawing.Size(492, 23);
             this.comboBoxViewInformation.TabIndex = 4;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.textBox1.Location = new System.Drawing.Point(282, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(459, 43);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.Text = "Supermarket Web Service Manager";
             // 
             // pictureBoxICA
             // 
@@ -131,6 +123,27 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label1.Location = new System.Drawing.Point(276, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(416, 32);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Supermarket Web Service Manager";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(276, 280);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(193, 21);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Select a web service to call";
             // 
             // Form1
             // 
@@ -153,10 +166,11 @@
         private TabControl tabControl1;
         private TabPage tabPage1;
         private ComboBox comboBoxViewInformation;
-        private TextBox textBox1;
         private PictureBox pictureBoxICA;
         private TabPage tabPage2;
         private Button buttonViewInformationSelect;
         private ListBox listBoxViewAllInformation;
+        private Label label2;
+        private Label label1;
     }
 }

@@ -62,6 +62,7 @@ namespace WinFormsClient2
                 case "Orders":
                     // Call the GetOrders method and display the results in the RichTextBox
                     List<Order> orders = service.GetOrders();
+                    
 
                     listBoxViewAllInformation.Items.Clear();
 
