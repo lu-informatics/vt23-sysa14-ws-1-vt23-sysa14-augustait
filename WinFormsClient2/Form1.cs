@@ -120,5 +120,29 @@ namespace WinFormsClient2
             }
 
         }
+
+
+
+        private void buttonSelectFind_Click(object sender, EventArgs e)
+        {
+            
+
+            int customerID = 2; // Replace 2 with the desired customer ID
+
+            var endpointConfiguration = WebService1SoapClient.EndpointConfiguration.WebService1Soap;
+
+            WebService1SoapClient service = new WebService1SoapClient(endpointConfiguration);
+
+            List<Order> orders = service.GetOrdersFromCustomer(customerID);
+
+            // Clear the text box before adding new orders
+            richTextBox1.Clear();
+
+            foreach (Order o in orders)
+            {
+                string orderInfo = $"Order ID: {o.OrderID} - Date: {o.OrderDate} - Supermarket ID: {o.SupermarketID} - Payment Method: {o.PaymentMethod}{Environment.NewLine}";
+                richTextBox1.AppendText(orderInfo);
+            }
+        }
     }
 }
