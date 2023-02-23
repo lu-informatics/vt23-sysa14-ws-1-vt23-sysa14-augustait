@@ -138,7 +138,7 @@ namespace WinFormsClient2
                         if (orders.Count == 0)
                         {
                             richTextBoxFindByID.Clear();
-                            richTextBoxFindByID.AppendText($"No Orders found for Customer ID: {idInput}.{Environment.NewLine}");
+                            richTextBoxFindByID.AppendText($"Please enter a new ID, No Orders found for Customer ID: {idInput}.{Environment.NewLine}");
                         }
                         else
                         {
@@ -157,7 +157,7 @@ namespace WinFormsClient2
                         if (orderlines.Count == 0)
                         {
                             richTextBoxFindByID.Clear();
-                            richTextBoxFindByID.AppendText($"No Orderlines found for Order ID: {idInput}.{Environment.NewLine}");
+                            richTextBoxFindByID.AppendText($"Please enter a new ID, No Orderlines found for Order ID: {idInput}.{Environment.NewLine}");
                         }
                         else
                         {
@@ -176,7 +176,7 @@ namespace WinFormsClient2
                         if (products.Count == 0)
                         {
                             richTextBoxFindByID.Clear();
-                            richTextBoxFindByID.AppendText($"No Products found for Category ID: {idInput}.{Environment.NewLine}");
+                            richTextBoxFindByID.AppendText($"Please enter a new ID, No Products found for Category ID: {idInput}.{Environment.NewLine}");
                         }
                         else
                         {
