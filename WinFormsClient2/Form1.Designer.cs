@@ -31,16 +31,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.richTextBoxViewAllInformation = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.listBoxViewAllInformation = new System.Windows.Forms.ListBox();
             this.buttonViewInformationSelect = new System.Windows.Forms.Button();
             this.comboBoxViewInformation = new System.Windows.Forms.ComboBox();
             this.pictureBoxICA = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.textBoxFindByID = new System.Windows.Forms.TextBox();
+            this.comboBoxFindByID = new System.Windows.Forms.ComboBox();
+            this.richTextBoxFindByID = new System.Windows.Forms.RichTextBox();
             this.buttonSelectFind = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -65,9 +65,9 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.richTextBoxViewAllInformation);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.listBoxViewAllInformation);
             this.tabPage1.Controls.Add(this.buttonViewInformationSelect);
             this.tabPage1.Controls.Add(this.comboBoxViewInformation);
             this.tabPage1.Controls.Add(this.pictureBoxICA);
@@ -78,6 +78,14 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "View Information";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // richTextBoxViewAllInformation
+            // 
+            this.richTextBoxViewAllInformation.Location = new System.Drawing.Point(15, 101);
+            this.richTextBoxViewAllInformation.Name = "richTextBoxViewAllInformation";
+            this.richTextBoxViewAllInformation.Size = new System.Drawing.Size(758, 164);
+            this.richTextBoxViewAllInformation.TabIndex = 10;
+            this.richTextBoxViewAllInformation.Text = "";
             // 
             // label2
             // 
@@ -99,15 +107,6 @@
             this.label1.Size = new System.Drawing.Size(416, 32);
             this.label1.TabIndex = 8;
             this.label1.Text = "Supermarket Web Service Manager";
-            // 
-            // listBoxViewAllInformation
-            // 
-            this.listBoxViewAllInformation.FormattingEnabled = true;
-            this.listBoxViewAllInformation.ItemHeight = 15;
-            this.listBoxViewAllInformation.Location = new System.Drawing.Point(15, 104);
-            this.listBoxViewAllInformation.Name = "listBoxViewAllInformation";
-            this.listBoxViewAllInformation.Size = new System.Drawing.Size(776, 139);
-            this.listBoxViewAllInformation.TabIndex = 7;
             // 
             // buttonViewInformationSelect
             // 
@@ -147,9 +146,9 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.textBox1);
-            this.tabPage2.Controls.Add(this.comboBox1);
-            this.tabPage2.Controls.Add(this.richTextBox1);
+            this.tabPage2.Controls.Add(this.textBoxFindByID);
+            this.tabPage2.Controls.Add(this.comboBoxFindByID);
+            this.tabPage2.Controls.Add(this.richTextBoxFindByID);
             this.tabPage2.Controls.Add(this.buttonSelectFind);
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.label4);
@@ -160,36 +159,36 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(807, 429);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "Find by ID";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // textBoxFindByID
             // 
-            this.textBox1.Location = new System.Drawing.Point(271, 354);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(206, 23);
-            this.textBox1.TabIndex = 18;
+            this.textBoxFindByID.Location = new System.Drawing.Point(271, 354);
+            this.textBoxFindByID.Name = "textBoxFindByID";
+            this.textBoxFindByID.Size = new System.Drawing.Size(206, 23);
+            this.textBoxFindByID.TabIndex = 18;
             // 
-            // comboBox1
+            // comboBoxFindByID
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBoxFindByID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxFindByID.FormattingEnabled = true;
+            this.comboBoxFindByID.Items.AddRange(new object[] {
             "Get Orders From Customer ID",
             "Get Orderlines From Order ID",
             "Get Products From Category ID"});
-            this.comboBox1.Location = new System.Drawing.Point(249, 293);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(251, 23);
-            this.comboBox1.TabIndex = 17;
+            this.comboBoxFindByID.Location = new System.Drawing.Point(249, 293);
+            this.comboBoxFindByID.Name = "comboBoxFindByID";
+            this.comboBoxFindByID.Size = new System.Drawing.Size(251, 23);
+            this.comboBoxFindByID.TabIndex = 17;
             // 
-            // richTextBox1
+            // richTextBoxFindByID
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(15, 111);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(750, 155);
-            this.richTextBox1.TabIndex = 16;
-            this.richTextBox1.Text = "";
+            this.richTextBoxFindByID.Location = new System.Drawing.Point(15, 111);
+            this.richTextBoxFindByID.Name = "richTextBoxFindByID";
+            this.richTextBoxFindByID.Size = new System.Drawing.Size(750, 155);
+            this.richTextBoxFindByID.TabIndex = 16;
+            this.richTextBoxFindByID.Text = "";
             // 
             // buttonSelectFind
             // 
@@ -269,7 +268,6 @@
         private PictureBox pictureBoxICA;
         private TabPage tabPage2;
         private Button buttonViewInformationSelect;
-        private ListBox listBoxViewAllInformation;
         private Label label2;
         private Label label1;
         private Label label5;
@@ -277,8 +275,9 @@
         private Label label3;
         private PictureBox pictureBox1;
         private Button buttonSelectFind;
-        private RichTextBox richTextBox1;
-        private TextBox textBox1;
-        private ComboBox comboBox1;
+        private RichTextBox richTextBoxFindByID;
+        private TextBox textBoxFindByID;
+        private ComboBox comboBoxFindByID;
+        private RichTextBox richTextBoxViewAllInformation;
     }
 }
