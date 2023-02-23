@@ -9,9 +9,9 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace WinFormsClient2
 {
-    public partial class Form1 : Form
+    public partial class WebServiceForm : Form
     {
-        public Form1()
+        public WebServiceForm()
         {
             InitializeComponent();
         }
