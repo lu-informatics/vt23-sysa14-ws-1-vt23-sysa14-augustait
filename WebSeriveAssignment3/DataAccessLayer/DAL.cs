@@ -171,7 +171,6 @@ namespace WebSeriveAssignment3.DataAccessLayer
                     product.Price = (decimal)reader["Price"];
                     product.CategoryID = (int)reader["CategoryID"];
 
-
                     products.Add(product);
                 }
             }
