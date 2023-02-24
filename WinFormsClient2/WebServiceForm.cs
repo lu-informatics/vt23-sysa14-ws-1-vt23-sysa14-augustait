@@ -51,7 +51,7 @@ namespace WinFormsClient2
 
                     foreach (Customer customer in customers)
                     {
-                        string customerInfo = string.Format("Name: {0} - Customer ID: {1} - Phone Number: {2}\n", customer.Name, customer.CustomerID, customer.PhoneNumber);
+                        string customerInfo = string.Format("Name: {0} - Customer ID: {1} - Phone Number: {2} - Email: {3}\n", customer.Name, customer.CustomerID, customer.PhoneNumber, customer.Email);
                         richTextBoxViewAllInformation.AppendText(customerInfo);
                     }
                     break;
