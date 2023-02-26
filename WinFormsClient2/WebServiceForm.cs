@@ -153,7 +153,7 @@ namespace WinFormsClient2
                         break;
 
                     case "Get Orderlines From Order ID":
-                        List<Orderline> orderlines = service.GetOrdersLinesFromOrder(idInput);
+                        List<Orderline> orderlines = service.GetOrderLinesFromOrder(idInput);
                         if (orderlines.Count == 0)
                         {
                             richTextBoxFindByID.Clear();

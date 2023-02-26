@@ -23,7 +23,7 @@ foreach (Order o in orders)
 
 }
 
-List<Orderline> or = service.GetOrdersLinesFromOrder(18732);
+List<Orderline> or = service.GetOrderLinesFromOrder(18732);
 foreach (Orderline o in or)
 {
     Console.WriteLine("Quantity:");

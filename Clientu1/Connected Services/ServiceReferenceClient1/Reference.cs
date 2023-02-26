@@ -512,12 +512,12 @@ namespace ServiceReferenceClient1
         [System.ServiceModel.OperationContractAttribute(Action="http://ics.lu.se/GetOrdersFromCustomer", ReplyAction="*")]
         System.Threading.Tasks.Task<ServiceReferenceClient1.GetOrdersFromCustomerResponse> GetOrdersFromCustomerAsync(ServiceReferenceClient1.GetOrdersFromCustomerRequest request);
         
-        // CODEGEN: Generating message contract since element name GetOrdersLinesFromOrderResult from namespace http://ics.lu.se/ is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://ics.lu.se/GetOrdersLinesFromOrder", ReplyAction="*")]
-        ServiceReferenceClient1.GetOrdersLinesFromOrderResponse GetOrdersLinesFromOrder(ServiceReferenceClient1.GetOrdersLinesFromOrderRequest request);
+        // CODEGEN: Generating message contract since element name GetOrderLinesFromOrderResult from namespace http://ics.lu.se/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://ics.lu.se/GetOrderLinesFromOrder", ReplyAction="*")]
+        ServiceReferenceClient1.GetOrderLinesFromOrderResponse GetOrderLinesFromOrder(ServiceReferenceClient1.GetOrderLinesFromOrderRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ics.lu.se/GetOrdersLinesFromOrder", ReplyAction="*")]
-        System.Threading.Tasks.Task<ServiceReferenceClient1.GetOrdersLinesFromOrderResponse> GetOrdersLinesFromOrderAsync(ServiceReferenceClient1.GetOrdersLinesFromOrderRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ics.lu.se/GetOrderLinesFromOrder", ReplyAction="*")]
+        System.Threading.Tasks.Task<ServiceReferenceClient1.GetOrderLinesFromOrderResponse> GetOrderLinesFromOrderAsync(ServiceReferenceClient1.GetOrderLinesFromOrderRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1196,17 +1196,17 @@ namespace ServiceReferenceClient1
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class GetOrdersLinesFromOrderRequest
+    public partial class GetOrderLinesFromOrderRequest
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetOrdersLinesFromOrder", Namespace="http://ics.lu.se/", Order=0)]
-        public ServiceReferenceClient1.GetOrdersLinesFromOrderRequestBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetOrderLinesFromOrder", Namespace="http://ics.lu.se/", Order=0)]
+        public ServiceReferenceClient1.GetOrderLinesFromOrderRequestBody Body;
         
-        public GetOrdersLinesFromOrderRequest()
+        public GetOrderLinesFromOrderRequest()
         {
         }
         
-        public GetOrdersLinesFromOrderRequest(ServiceReferenceClient1.GetOrdersLinesFromOrderRequestBody Body)
+        public GetOrderLinesFromOrderRequest(ServiceReferenceClient1.GetOrderLinesFromOrderRequestBody Body)
         {
             this.Body = Body;
         }
@@ -1216,17 +1216,17 @@ namespace ServiceReferenceClient1
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute(Namespace="http://ics.lu.se/")]
-    public partial class GetOrdersLinesFromOrderRequestBody
+    public partial class GetOrderLinesFromOrderRequestBody
     {
         
         [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
         public int OrderID;
         
-        public GetOrdersLinesFromOrderRequestBody()
+        public GetOrderLinesFromOrderRequestBody()
         {
         }
         
-        public GetOrdersLinesFromOrderRequestBody(int OrderID)
+        public GetOrderLinesFromOrderRequestBody(int OrderID)
         {
             this.OrderID = OrderID;
         }
@@ -1236,17 +1236,17 @@ namespace ServiceReferenceClient1
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class GetOrdersLinesFromOrderResponse
+    public partial class GetOrderLinesFromOrderResponse
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetOrdersLinesFromOrderResponse", Namespace="http://ics.lu.se/", Order=0)]
-        public ServiceReferenceClient1.GetOrdersLinesFromOrderResponseBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetOrderLinesFromOrderResponse", Namespace="http://ics.lu.se/", Order=0)]
+        public ServiceReferenceClient1.GetOrderLinesFromOrderResponseBody Body;
         
-        public GetOrdersLinesFromOrderResponse()
+        public GetOrderLinesFromOrderResponse()
         {
         }
         
-        public GetOrdersLinesFromOrderResponse(ServiceReferenceClient1.GetOrdersLinesFromOrderResponseBody Body)
+        public GetOrderLinesFromOrderResponse(ServiceReferenceClient1.GetOrderLinesFromOrderResponseBody Body)
         {
             this.Body = Body;
         }
@@ -1256,19 +1256,19 @@ namespace ServiceReferenceClient1
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute(Namespace="http://ics.lu.se/")]
-    public partial class GetOrdersLinesFromOrderResponseBody
+    public partial class GetOrderLinesFromOrderResponseBody
     {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public System.Collections.Generic.List<ServiceReferenceClient1.Orderline> GetOrdersLinesFromOrderResult;
+        public System.Collections.Generic.List<ServiceReferenceClient1.Orderline> GetOrderLinesFromOrderResult;
         
-        public GetOrdersLinesFromOrderResponseBody()
+        public GetOrderLinesFromOrderResponseBody()
         {
         }
         
-        public GetOrdersLinesFromOrderResponseBody(System.Collections.Generic.List<ServiceReferenceClient1.Orderline> GetOrdersLinesFromOrderResult)
+        public GetOrderLinesFromOrderResponseBody(System.Collections.Generic.List<ServiceReferenceClient1.Orderline> GetOrderLinesFromOrderResult)
         {
-            this.GetOrdersLinesFromOrderResult = GetOrdersLinesFromOrderResult;
+            this.GetOrderLinesFromOrderResult = GetOrderLinesFromOrderResult;
         }
     }
     
@@ -1565,32 +1565,32 @@ namespace ServiceReferenceClient1
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ServiceReferenceClient1.GetOrdersLinesFromOrderResponse ServiceReferenceClient1.WebService1Soap.GetOrdersLinesFromOrder(ServiceReferenceClient1.GetOrdersLinesFromOrderRequest request)
+        ServiceReferenceClient1.GetOrderLinesFromOrderResponse ServiceReferenceClient1.WebService1Soap.GetOrderLinesFromOrder(ServiceReferenceClient1.GetOrderLinesFromOrderRequest request)
         {
-            return base.Channel.GetOrdersLinesFromOrder(request);
+            return base.Channel.GetOrderLinesFromOrder(request);
         }
         
-        public System.Collections.Generic.List<ServiceReferenceClient1.Orderline> GetOrdersLinesFromOrder(int OrderID)
+        public System.Collections.Generic.List<ServiceReferenceClient1.Orderline> GetOrderLinesFromOrder(int OrderID)
         {
-            ServiceReferenceClient1.GetOrdersLinesFromOrderRequest inValue = new ServiceReferenceClient1.GetOrdersLinesFromOrderRequest();
-            inValue.Body = new ServiceReferenceClient1.GetOrdersLinesFromOrderRequestBody();
+            ServiceReferenceClient1.GetOrderLinesFromOrderRequest inValue = new ServiceReferenceClient1.GetOrderLinesFromOrderRequest();
+            inValue.Body = new ServiceReferenceClient1.GetOrderLinesFromOrderRequestBody();
             inValue.Body.OrderID = OrderID;
-            ServiceReferenceClient1.GetOrdersLinesFromOrderResponse retVal = ((ServiceReferenceClient1.WebService1Soap)(this)).GetOrdersLinesFromOrder(inValue);
-            return retVal.Body.GetOrdersLinesFromOrderResult;
+            ServiceReferenceClient1.GetOrderLinesFromOrderResponse retVal = ((ServiceReferenceClient1.WebService1Soap)(this)).GetOrderLinesFromOrder(inValue);
+            return retVal.Body.GetOrderLinesFromOrderResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ServiceReferenceClient1.GetOrdersLinesFromOrderResponse> ServiceReferenceClient1.WebService1Soap.GetOrdersLinesFromOrderAsync(ServiceReferenceClient1.GetOrdersLinesFromOrderRequest request)
+        System.Threading.Tasks.Task<ServiceReferenceClient1.GetOrderLinesFromOrderResponse> ServiceReferenceClient1.WebService1Soap.GetOrderLinesFromOrderAsync(ServiceReferenceClient1.GetOrderLinesFromOrderRequest request)
         {
-            return base.Channel.GetOrdersLinesFromOrderAsync(request);
+            return base.Channel.GetOrderLinesFromOrderAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ServiceReferenceClient1.GetOrdersLinesFromOrderResponse> GetOrdersLinesFromOrderAsync(int OrderID)
+        public System.Threading.Tasks.Task<ServiceReferenceClient1.GetOrderLinesFromOrderResponse> GetOrderLinesFromOrderAsync(int OrderID)
         {
-            ServiceReferenceClient1.GetOrdersLinesFromOrderRequest inValue = new ServiceReferenceClient1.GetOrdersLinesFromOrderRequest();
-            inValue.Body = new ServiceReferenceClient1.GetOrdersLinesFromOrderRequestBody();
+            ServiceReferenceClient1.GetOrderLinesFromOrderRequest inValue = new ServiceReferenceClient1.GetOrderLinesFromOrderRequest();
+            inValue.Body = new ServiceReferenceClient1.GetOrderLinesFromOrderRequestBody();
             inValue.Body.OrderID = OrderID;
-            return ((ServiceReferenceClient1.WebService1Soap)(this)).GetOrdersLinesFromOrderAsync(inValue);
+            return ((ServiceReferenceClient1.WebService1Soap)(this)).GetOrderLinesFromOrderAsync(inValue);
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync()
