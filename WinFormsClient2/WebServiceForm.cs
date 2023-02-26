@@ -114,6 +114,11 @@ namespace WinFormsClient2
                 richTextBoxViewAllInformation.AppendText("Please select a web service method to call");
 
             }
+            catch (System.ServiceModel.CommunicationException ex)
+            {
+                richTextBoxFindByID.AppendText("A communication error occurred while calling the web service");
+            }
+          
         }
 
 
@@ -209,6 +214,11 @@ namespace WinFormsClient2
             {
                 richTextBoxFindByID.AppendText("Sorry, we encountered an error while processing your request. Please try again later");
             }
+            catch (System.ServiceModel.CommunicationException ex)
+            {
+                richTextBoxFindByID.AppendText("A communication error occurred while calling the web service");
+            }
+          
 
 
 
