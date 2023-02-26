@@ -85,7 +85,7 @@ namespace WebSeriveAssignment3
         }
 
          [WebMethod(Description = "Returns all orderlines from a order")]
-        public List<Orderline> GetOrdersLinesFromOrder(int OrderID)
+        public List<Orderline> GetOrderLinesFromOrder(int OrderID)
         {
         List<Orderline> orderlines = DAL.GetOrderLinesFromOrder(OrderID);
         return orderlines;
