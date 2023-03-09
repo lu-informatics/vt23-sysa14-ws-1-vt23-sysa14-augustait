@@ -16,7 +16,7 @@ namespace WinFormsClient2
             InitializeComponent();
         }
 
-        private void buttonViewInformationSelect_Click(object sender, EventArgs e)
+        private void ButtonViewInformationSelect_Click(object sender, EventArgs e)
         {
             try { 
             string viewCertainInformation = comboBoxViewInformation.SelectedItem.ToString();
@@ -123,7 +123,7 @@ namespace WinFormsClient2
 
 
 
-        private void buttonSelectFind_Click(object sender, EventArgs e)
+        private void ButtonSelectFind_Click(object sender, EventArgs e)
         {
             try {
                 string findCertainInformation = comboBoxFindByID.SelectedItem.ToString();
