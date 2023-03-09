@@ -117,7 +117,7 @@
             this.buttonViewInformationSelect.TabIndex = 5;
             this.buttonViewInformationSelect.Text = "SELECT";
             this.buttonViewInformationSelect.UseVisualStyleBackColor = true;
-            this.buttonViewInformationSelect.Click += new System.EventHandler(this.buttonViewInformationSelect_Click);
+            this.buttonViewInformationSelect.Click += new System.EventHandler(this.ButtonViewInformationSelect_Click);
             // 
             // comboBoxViewInformation
             // 
@@ -198,7 +198,7 @@
             this.buttonSelectFind.TabIndex = 15;
             this.buttonSelectFind.Text = "SELECT";
             this.buttonSelectFind.UseVisualStyleBackColor = true;
-            this.buttonSelectFind.Click += new System.EventHandler(this.buttonSelectFind_Click);
+            this.buttonSelectFind.Click += new System.EventHandler(this.ButtonSelectFind_Click);
             // 
             // label5
             // 
